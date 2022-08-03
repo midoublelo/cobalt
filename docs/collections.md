@@ -1,10 +1,9 @@
 # Collections
-## Notes
 - collections are compound types that can contain multiple elements in them
 - they are zero-indexed
 - main types of collections are: lists, arrays and maps
 
-### Lists
+## Lists
 lists are created like this:
 ```
 var list1 = ["Smith", 2.2, False]
@@ -20,7 +19,7 @@ var strList: String = ["Hello", "World"]
 ```
 - typed lists are still mutable
 - its length can be extended or shortened at any time
-### Arrays
+## Arrays
 arrays are created like this:
 ```
 let array1 = ["Smith", 2.2, False]
@@ -35,7 +34,7 @@ let intList: Integer = [5, 9, 233]
 let strList: String = ["Hello", "World"]
 ```
 - dont know why you need to do this because the list isnt changing anyway but sure
-### Maps
+## Maps
 maps are created like this:
 ```
 var capitals = {

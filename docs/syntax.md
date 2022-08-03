@@ -20,7 +20,7 @@ the following words are reserved by new-lang:
 keywords
 ```
 ## Naming Conventions
-new-lang does not enforce any naming conventions but strongly reccommends `camelCase`
+new-lang does not enforce any naming conventions but strongly recommends `PascalCase` for class names and `camelCase` for everything else
 ## Newlines
 newlines are used to seperate statements when they aren't placed in front of a token that cannot end a statement as seen here:
 ```

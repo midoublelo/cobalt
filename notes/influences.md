@@ -4,3 +4,4 @@ the following languages were influential in the design and development of new-la
 - crystal
 - wren
 - inko
+- gelix (https://gelix.angm.xyz/welcome.html)
