@@ -9,6 +9,8 @@
 - umbra
 - eclipse
 - hurricane
+- lotus
+- fang
 
 ### the rest
 - sienna
