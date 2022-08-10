@@ -1,2 +1,2 @@
-# new-lang
-notes for a new programming language
+# Beryl
+Beryl programming language
