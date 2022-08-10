@@ -1,2 +1,2 @@
-# Beryl
-Beryl programming language
+# Cobalt
+Cobalt programming language
