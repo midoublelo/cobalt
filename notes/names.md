@@ -27,4 +27,3 @@
 - gauge
 - visage
 - hourglass
-    
