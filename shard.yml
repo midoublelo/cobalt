@@ -1,0 +1,13 @@
+name: cobalt
+version: 0.1.0
+
+authors:
+  - Millo Evers <contact@milloevers.com>
+
+targets:
+  cobalt:
+    main: src/cobalt.cr
+
+crystal: 1.5.0
+
+license: MIT
