@@ -1,1 +1,6 @@
-print("test")
+fn sayHello(world):
+    print("Hello " + world)
+end
+
+sayHello("World")
+print("Hello World again")

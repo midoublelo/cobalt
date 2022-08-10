@@ -8,6 +8,13 @@ targets:
   cobalt:
     main: src/cobalt.cr
 
+dependencies:
+  pegmatite:
+    github: jemc/crystal-pegmatite
+  clim:
+    github: at-grandpa/clim
+    version: 0.17.1
+
 crystal: 1.5.0
 
 license: MIT
