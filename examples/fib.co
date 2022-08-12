@@ -1,0 +1,9 @@
+fn fib(n: Integer) -> Integer:
+    if 1 >= n:
+        return n
+    end
+    return fib(n - 1) + fib(n - 2)
+end
+
+let num = fib(10)
+print(num)

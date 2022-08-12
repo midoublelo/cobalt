@@ -1,0 +1,21 @@
+fn sort():
+    let arr = [5, 1, 2, 4, 3]
+    let n = len(arr)
+
+    var c = 0
+    while c < n:
+        var d = 0
+        while d < (n - c - 1):
+            var current = arr[d]
+            var next = arr[d+1]
+            if current > next:
+                let swap = arr[d]
+                arr[d] = arr[d+1]
+                arr[d+1] = swap
+            end
+            d += 1
+        end
+        c += 1
+    end
+    print(arr)
+end
