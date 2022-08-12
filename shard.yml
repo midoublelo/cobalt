@@ -1,5 +1,6 @@
 name: cobalt
 version: 0.1.0
+description: The Cobalt programming language
 
 authors:
   - Millo Evers <contact@milloevers.com>
