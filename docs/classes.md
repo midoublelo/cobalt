@@ -8,12 +8,12 @@ end
 a more advanced example using methods is seen below:
 ```
 class Pet:
-    var name = "Rover"
-    var age = 7
-    var type = "Dog"
+    name = "Rover"
+    age = 7
+    type = "Dog"
 
     fn changeAge(newAge: Integer) -> Integer:
-        this.age = newAge
+        val this.age = newAge
     end
 
     fn makeNoise():
@@ -28,7 +28,7 @@ end
 you can create an instance of the class by calling it like a function
 ```
 fn main():
-    let animal = Pet()
+    animal! = Pet()
     print(animal.age) # => 7
     animal.changeAge(8)
     print(animal.age) # => 8

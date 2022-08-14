@@ -6,7 +6,7 @@
 ## Lists
 lists are created like this:
 ```
-var list1 = ["Smith", 2.2, False]
+list1 = ["Smith", 2.2, False]
 ```
 - lists are mutable and, by default, can contain any type
 - existing elements in the list can be reassigned
@@ -22,7 +22,7 @@ var strList: String = ["Hello", "World"]
 ## Arrays
 arrays are created like this:
 ```
-let array1 = ["Smith", 2.2, False]
+array1! = ["Smith", 2.2, False]
 ```
 - arrays are immutable and their length can't change
 - they can still contain any type
@@ -30,14 +30,14 @@ let array1 = ["Smith", 2.2, False]
 
 arrays can be given a specific type like this:
 ```
-let intList: Integer = [5, 9, 233]
-let strList: String = ["Hello", "World"]
+intList!: Integer = [5, 9, 233]
+strList!: String = ["Hello", "World"]
 ```
 - dont know why you need to do this because the list isnt changing anyway but sure
 ## Maps
 maps are created like this:
 ```
-var capitals = {
+capitals = {
     "United Kingdom": "London",
     "Japan": "Tokyo",
     "Ethiopia": "Addis Ababa"
@@ -45,4 +45,4 @@ var capitals = {
 ```
 - this data structure is sometimes referred to as a hash, dictionary, etc. in other languages
 - consists of a key mapped to a value
-- maps are mutable but can be made immutable with the 'let' keyword
+- maps are mutable but can be made immutable by adding an exclamation mark to the variable name
