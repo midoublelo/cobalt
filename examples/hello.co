@@ -1,7 +1,9 @@
-fn sayHello(world):
-    print("Hello " + world)
+fn sayHello(message):
+  print("Hello " + message)
 end
+ 
+world = "World!"
+hello(world) # => "Hello World!"
 
-sayHello("World")
-
-print("Hello World again")
+val world = "World again!"
+hello(world) # => "Hello World again!"
