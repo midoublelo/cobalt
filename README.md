@@ -6,3 +6,15 @@ The Cobalt programming language
 3. Build the project with `crystal build src/cobalt.cr` or use the `build.sh` script
 ## Usage
 After compiling you can use the cli tool by running the produced executable. To learn how to program in Cobalt you can look in the examples folder or read what's in the docs folder.
+## Demo
+```
+fn sayHello(message):
+  print("Hello " + message)
+end
+ 
+world = "World!"
+hello(world) # => "Hello World!"
+
+val world = "World again!"
+hello(world) # => "Hello World again!"
+```
