@@ -11,13 +11,12 @@ module Cobalt
             fn: TokenType::FN,
             for: TokenType::FOR,
             if: TokenType::IF,
-            let: TokenType::LET,
             nil: TokenType::NIL,
             or: TokenType::OR,
             return: TokenType::RETURN,
             this: TokenType::THIS,
             true: TokenType::TRUE,
-            var: TokenType::VAR,
+            val: TokenType::VAL,
             while: TokenType::WHILE,
         }
     end
