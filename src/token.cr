@@ -22,7 +22,7 @@ module Cobalt
 
         # Keywords. NOTE: Add pattern matching later
         AND; CLASS; ELSE; END; FALSE; FN; FOR; IF;
-        LET; NIL; OR; RETURN; THIS; TRUE; VAR; WHILE
+        NIL; OR; RETURN; THIS; TRUE; VAL; WHILE
 
         EOF
     end
