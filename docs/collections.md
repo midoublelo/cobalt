@@ -14,8 +14,8 @@ list1 = ["Smith", 2.2, False]
 
 lists can be given a specific type like this:
 ```
-var intList: Integer = [5, 9, 233]
-var strList: String = ["Hello", "World"]
+intList: Integer = [5, 9, 233]
+strList: String = ["Hello", "World"]
 ```
 - typed lists are still mutable
 - its length can be extended or shortened at any time
@@ -33,7 +33,6 @@ arrays can be given a specific type like this:
 intList!: Integer = [5, 9, 233]
 strList!: String = ["Hello", "World"]
 ```
-- dont know why you need to do this because the list isnt changing anyway but sure
 ## Maps
 maps are created like this:
 ```

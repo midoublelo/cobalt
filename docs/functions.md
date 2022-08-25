@@ -1,13 +1,14 @@
 # Functions
 functions are created like this:
 ```
-fn main():
+fn main:
     # [...]
 end
 ```
+parentheses are not necessary if the function has no parameters
 you can add a return type to the function like this:
 ```
-fn greeting() -> String:
+fn greeting -> String:
     "Hello" 
     # functions automatically return their last expression but you can return early using the 'return' keyword
 end
