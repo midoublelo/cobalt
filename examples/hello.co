@@ -1,5 +1,5 @@
-fn sayHello(message):
-  print("Hello " + message)
+fn sayhello(message):
+    print("Hello " + message)
 end
  
 world = "World!"

@@ -3,7 +3,6 @@ require "./token"
 module Cobalt
     class Scanner
         @@keywords = {
-        and:    TokenType::AND,
         class:  TokenType::CLASS,
         else:   TokenType::ELSE,
         end:    TokenType::END,
@@ -12,14 +11,12 @@ module Cobalt
         for:    TokenType::FOR,
         if:     TokenType::IF,
         nil:    TokenType::NIL,
-        or:     TokenType::OR,
         return: TokenType::RETURN,
         this:   TokenType::THIS,
         true:   TokenType::TRUE,
         val:    TokenType::VAL,
         while:  TokenType::WHILE,
         }
-    end
 
     def initialize(source : String)
         @source = source
@@ -45,13 +42,14 @@ module Cobalt
         case c
         when '(' then addToken(TokenType::LEFT_PAREN)
         when ')' then addToken(TokenType::RIGHT_PAREN)
-        when '{' then addToken(TokenType::LEFT_BRACE)
-        when '}' then addToken(TokenType::RIGHT_BRACE)
+        # when '{' then addToken(TokenType::LEFT_BRACE)
+        # when '}' then addToken(TokenType::RIGHT_BRACE)
         when ',' then addToken(TokenType::COMMA)
         when '.' then addToken(TokenType::DOT)
         when '+' then addToken(TokenType::PLUS)
-        when ';' then addToken(TokenType::SEMICOLON)
+        # when ';' then addToken(TokenType::SEMICOLON)
         when '*' then addToken(TokenType::STAR)
+        when ':' then addToken(TokenType::COLON)
         when '-' then addToken(match('>') ? TokenType::ARROW : TokenType::MINUS)
         when '!' then addToken(match('=') ? TokenType::BANG_EQUAL : TokenType::BANG)
         when '=' then addToken(match('=') ? TokenType::EQUAL_EQUAL : TokenType::EQUAL)
@@ -82,9 +80,14 @@ module Cobalt
     end
 
     def string
-        until peek == '"' && at_end?
-            @line += 1 if peek == '\n'
-            advance
+        begin
+            until peek == '"' && !at_end?
+                @line += 1 if peek == '\n'
+                advance
+            end
+        rescue IndexError
+            Runner.error(@line, "Unterminated string.")
+            return
         end
 
         if at_end?
@@ -93,7 +96,7 @@ module Cobalt
         end
 
         advance
-        addToken(TokenType::String, @source[@start + 1...@current - 1])
+        addToken(TokenType::STRING, @source[@start + 1...@current - 1])
     end
 
     def number
@@ -127,7 +130,7 @@ module Cobalt
         @source[@current - 1]
     end
 
-    def addToken(type, literal = Nil)
+    def addToken(type, literal = nil)
         text = @source[@start...@current]
         @tokens << Token.new(type, text, literal, @line)
     end
@@ -163,4 +166,5 @@ module Cobalt
     def alphaNumeric?(c)
         alpha?(c) || digit?(c)
     end
+end
 end

@@ -5,24 +5,41 @@ module Cobalt
 
     enum TokenType
         # Single-character tokens.
-        LEFT_PAREN; RIGHT_PAREN; LEFT_BRACKET; RIGHT_BRACKET
-        COMMA; DOT; MINUS; PLUS; SLASH; STAR; COLON;
+        LEFT_PAREN          # (
+        RIGHT_PAREN         # )
+        LEFT_BRACKET        # [
+        RIGHT_BRACKET       # ]
+        COMMA               # ,
+        DOT                 # .
+        MINUS               # -
+        PLUS                # +
+        SLASH               # /
+        STAR                # *
+        COLON               # :
 
         # One or two character tokens.
-        BANG; BANG_EQUAL
-        EQUAL; EQUAL_EQUAL
-        GREATER; GREATER_EQUAL
-        LESS; LESS_EQUAL;
-        QUESTION; PIPE;
-        BAR; SLASH_SLASH;
-        ARROW; FAT_ARROW;
+        BANG                # !
+        BANG_EQUAL          # !=
+        EQUAL               # =
+        EQUAL_EQUAL         # ==
+        GREATER             # >
+        GREATER_EQUAL       # >=
+        LESS                # <
+        LESS_EQUAL          # <=
+        QUESTION            # ?
+        SLASH_SLASH         # //
+        ARROW               # ->
+        BAR                 # |
+        OR                  # ||
+        AMBERSAND           # &
+        AND                 # &&
 
         # Literals.
         IDENTIFIER; STRING; NUMBER
 
         # Keywords. NOTE: Add pattern matching later
-        AND; CLASS; ELSE; END; FALSE; FN; FOR; IF;
-        NIL; OR; RETURN; THIS; TRUE; VAL; WHILE
+        CLASS; ELSE; END; FALSE; FN; FOR; IF;
+        NIL; RETURN; THIS; TRUE; VAL; WHILE
 
         EOF
     end
@@ -30,7 +47,7 @@ module Cobalt
     class Token
         property :type, :lexeme, :literal, :line
 
-        def intialise(type : TokenType, lexeme : String, literal : LiteralType, line : Integer)
+        def initialize(type : TokenType, lexeme : String, literal : LiteralType, line : Integer)
             @type = type
             @lexeme = lexeme
             @literal = literal

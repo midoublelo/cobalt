@@ -20,8 +20,7 @@ module Cobalt
           begin
             fileInput = args.file.not_nil!.chomp
             content = File.read(fileInput)
-            Runner.runFile(content)
-            puts content
+            Runner.run(content)
           rescue NilAssertionError
             puts "[Error] Missing file input"
             puts opts.help_string

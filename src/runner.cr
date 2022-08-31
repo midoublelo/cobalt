@@ -34,9 +34,11 @@ module Cobalt
             @@had_runtimeError = true
         end
 
-        def self.runFile(source)
+        def self.run(source)
             tokens = Scanner.new(source).scanTokens
             puts tokens
+            exit 65 if @@had_error
+            exit 70 if @@had_runtimeError
         end
     end
 end
