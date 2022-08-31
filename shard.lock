@@ -4,11 +4,3 @@ shards:
     git: https://github.com/at-grandpa/clim.git
     version: 0.17.1
 
-  pegasus:
-    git: https://github.com/danilafe/pegasus.git
-    version: 0.1.0+git.commit.40daeea23ba73fa71e281673f44baeb3e825e831
-
-  pegmatite:
-    git: https://github.com/jemc/crystal-pegmatite.git
-    version: 0.2.3+git.commit.e7470d6eb1135cfd8a5353302edc5cad96f2c562
-

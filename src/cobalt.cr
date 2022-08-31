@@ -1,5 +1,6 @@
 # TODO: Write documentation for `Cobalt`
 require "clim"
+require "./runner"
 
 module Cobalt
   VERSION = "0.1.0"
@@ -19,6 +20,7 @@ module Cobalt
           begin
             fileInput = args.file.not_nil!.chomp
             content = File.read(fileInput)
+            Runner.runFile(content)
             puts content
           rescue NilAssertionError
             puts "[Error] Missing file input"

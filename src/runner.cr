@@ -1,12 +1,10 @@
 require "./token"
 require "./scanner"
-require "./parser"
-# require "./interpreter"
 
 module Cobalt
     class Runner
         @@had_error = false
-        @@had_runtime_error = false
+        @@had_runtimeError = false
         # @@interpreter = Interpreter.new
     
         def self.report(line, where, message)
@@ -31,9 +29,14 @@ module Cobalt
             end
         end
     
-        def self.runtime_error(error)
+        def self.runtimeError(error)
             puts "#{error.message}\n[line #{error.token.line}]"
-            @@had_runtime_error = true
+            @@had_runtimeError = true
+        end
+
+        def self.runFile(source)
+            tokens = Scanner.new(source).scanTokens
+            puts tokens
         end
     end
 end

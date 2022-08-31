@@ -10,10 +10,6 @@ targets:
     main: src/cobalt.cr
 
 dependencies:
-  pegmatite:
-    github: jemc/crystal-pegmatite
-  pegasus:
-    github: DanilaFe/pegasus
   clim:
     github: at-grandpa/clim
     version: 0.17.1
