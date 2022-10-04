@@ -30,8 +30,8 @@ array1! = ["Smith", 2.2, False]
 
 arrays can be given a specific type like this:
 ```
-intList!: Integer = [5, 9, 233]
-strList!: String = ["Hello", "World"]
+int intList! = [5, 9, 233]
+string strList! = ["Hello", "World"]
 ```
 ## Maps
 maps are created like this:

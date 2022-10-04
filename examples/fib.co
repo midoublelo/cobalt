@@ -1,9 +1,11 @@
-fn fib(n: Integer) -> Integer:
+fn fib(int n) -> int:
     if 1 >= n:
-        return n
+        return n;
     end
-    return fib(n - 1) + fib(n - 2)
+    return fib(n - 1) + fib(n - 2);
 end
 
-num = fib(10)
-print(num)
+fn main:
+    num = fib(10);
+    print(num);
+end

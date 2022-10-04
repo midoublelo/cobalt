@@ -8,14 +8,14 @@ end
 parentheses are not necessary if the function has no parameters
 you can add a return type to the function like this:
 ```
-fn greeting -> String:
-    "Hello" 
+fn greeting -> string:
+    "Hello"
     # functions automatically return their last expression but you can return early using the 'return' keyword
 end
 ```
 you can add parameters to the function like this:
 ```
-fn addNums(a: Integer, b: Integer) -> Integer:
+fn addNums(int a, int b) -> int:
     a + b
 end
 ```

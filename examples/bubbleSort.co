@@ -1,23 +1,21 @@
-fn sort():
-    arr! = [5, 1, 2, 4, 3]
-    n! = len(arr)
+fn main:
+    arr! = [5, 1, 2, 4, 3];
+    n! = len(arr);
 
-    c = 0
+    c = 0;
     while c < n:
-        d = 0
+        d = 0;
         while d < (n - c - 1):
-            current = arr[d]
-            next = arr[d+1]
+            current = arr[d];
+            next = arr[d+1];
             if current > next:
-                swap = arr[d]
-                val arr[d] = arr[d+1]
-                val arr[d+1] = swap
+                swap = arr[d];
+                val arr[d] = arr[d+1];
+                val arr[d+1] = swap;
             end
-            val d += 1
+            val d += 1;
         end
-        val c += 1
+        val c += 1;
     end
-    print(arr)
+    print(arr);
 end
-
-sort

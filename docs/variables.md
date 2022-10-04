@@ -20,6 +20,6 @@ val a! = 2 # => Error: cannot change value of immutable variable
 ```
 cobalt has type inference so you do not need to declare the type of the variable but you can if you want
 ```
-b: Integer = 5
+int b = 5
 val b = "cake" # => Error: cannot change type of b
 ```
