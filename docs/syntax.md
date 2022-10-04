@@ -1,5 +1,6 @@
 # Syntax
-cobalt files are stored in text files with a `.co` file extension
+- cobalt files are stored in text files with a `.co` file extension
+- the executed file needs a `main` function which acts as the start point of the program
 ## Comments
 single line comments are done as follows:
 ```
