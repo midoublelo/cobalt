@@ -1,0 +1,33 @@
+using "random";
+
+class Human:
+    fn Human(name, age):
+        val this.name = name;
+        val this.age = age;
+    end
+
+    fn speak:
+        print("Hello! My name is ${name} and I am ${age} years old.");
+    end
+end
+
+fn genRandomName:
+    forenameOptions = ["name1", "name2", "name3", "name4", "name5"];
+    surnameOptions = ["surname1", "surname2", "surname3", "surname4","surname5"];
+    name = "${random.choice(forenameOptions)} ${random.choice(surnameOptions)}";
+end
+
+fn genRandomAge:
+    age = random.int(1, 99);
+end
+
+fn generateHuman:
+    newHuman = Human(genRandomName(), genRandomAge());
+    newHuman.speak();
+end
+
+fn main:
+    for (i = 0; i < 3; i++):
+        generateHuman();
+    end
+end
