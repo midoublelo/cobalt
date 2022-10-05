@@ -14,8 +14,8 @@ list1 = ["Smith", 2.2, False]
 
 lists can be given a specific type like this:
 ```
-intList: Integer = [5, 9, 233]
-strList: String = ["Hello", "World"]
+int intList = [5, 9, 233]
+string strList = ["Hello", "World"]
 ```
 - typed lists are still mutable
 - its length can be extended or shortened at any time
