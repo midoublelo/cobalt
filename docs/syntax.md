@@ -18,7 +18,7 @@ comment */
 ## Keywords
 the following words are reserved by cobalt:
 ```
-keywords
+class fn end val while if for return using else nil false true this from
 ```
 ## Naming Conventions
 cobalt does not enforce any naming conventions but strongly recommends `PascalCase` for class names and `camelCase` for everything else
