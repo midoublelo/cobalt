@@ -40,3 +40,22 @@ cobalt is actually a curly braces lang, they are just disguised. a `:` replaces 
 end
 ```
 this example makes it look bad but trust me it works in practice
+## Symbols and Keywords
+cobalt has the pipe operator which is used for function composition
+```
+fn sum(a, b):
+    a + b;
+end
+
+fn multiply(a, b):
+    a * b;
+end
+
+fn divide(a, b):
+    a / b;
+end
+
+sum(2, 3) |> multiply(3) |> divide(5); # => 3
+divide(multiply(sum(2, 3), 3), 5); # => 3
+```
+They return the same value but using the pipe operator makes the code more readable and understandable
